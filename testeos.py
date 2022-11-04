@@ -8,12 +8,10 @@ import datetime as dt
 
 # Cargamos los datos
 
-df = {'fecha': ['2020-01', '2020-02', '2020-03', '2020-04', '2020-05'], 'casos': [313754198, 306069353, 222294728, 59187842, 77753791]}
-df = pd.DataFrame(df)
+#make 2 subplots
 
-#Loc min value index
-
-min_value = df['casos'].min()
-min_index = df['casos'].idxmin()
-
-print(min_value, min_index)
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5))
+#plot 1st
+ax1.plot(df['Fecha'], df['Casos'], color='red')
+#add xlabel to ax1
+ax1.set_xlabel('Fecha')
