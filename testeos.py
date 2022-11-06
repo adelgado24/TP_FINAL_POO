@@ -8,3 +8,6 @@ import datetime as dt
 #get first index of the dataframe
 
 
+df = pd.read_csv("datos/dat-ab-append.csv")
+
+#remove second row from dataset
