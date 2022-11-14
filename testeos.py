@@ -10,4 +10,7 @@ import datetime as dt
 
 df = pd.read_csv("datos/dat-ab-append.csv")
 
-#remove second row from dataset
+plt.plot(df["DIA_TRANSPORTE"],df["CANTIDAD"])
+#move xticks slighlty to the left
+plt.xticks(rotation=45, ha='right', rotation_mode='anchor', fontsize=8)
+plt.show()
