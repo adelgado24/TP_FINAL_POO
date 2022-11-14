@@ -10,7 +10,8 @@ import datetime as dt
 
 df = pd.read_csv("datos/dat-ab-append.csv")
 
-plt.plot(df["DIA_TRANSPORTE"],df["CANTIDAD"])
-#move xticks slighlty to the left
-plt.xticks(rotation=45, ha='right', rotation_mode='anchor', fontsize=8)
-plt.show()
+a = df["NOMBRE_EMPRESA"].value_counts(10).head(10)
+
+#make 2 subpplots
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
+ax1.barh(a.index, a.values)
