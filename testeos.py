@@ -15,3 +15,7 @@ a = df["NOMBRE_EMPRESA"].value_counts(10).head(10)
 #make 2 subpplots
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
 ax1.barh(a.index, a.values)
+
+#concat 2 df
+df2 = pd.read_csv("datos/dat-ab-append.csv")
+df3 = pd.concat([df, df2], axis=0)
